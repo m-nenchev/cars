@@ -1,0 +1,11 @@
+.footerItem{
+    width: 75px;
+    background-color: darkmagenta;
+
+}
+.footerItem:hover{
+    width: 75px;
+    font-size: 15px;
+    background-color: darkseagreen;
+    color: ivory;
+}
