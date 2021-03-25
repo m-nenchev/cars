@@ -1,11 +1,18 @@
 .listitem{
     display: inline-block;
-    width: 200px;
-    background-color: blue;
-    color: cornsilk;
+    width: 100px;
+    
+    
+    
 }
-.listitem:hover{
-    font-size: 15px;
-    background-color: cyan;
-    color:darkblue;
+.conteiner {
+    background-color: rgb(133, 169, 194);
+}
+
+a{
+    margin-left: 20px;
+    font-size: 20px;
+    width: auto;
+    color:white;
+
 }

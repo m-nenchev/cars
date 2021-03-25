@@ -1,17 +1,19 @@
+import { Link, NavLink } from 'react-router-dom';
+
 import './Header.css'
 
 
 function Header() {
     return (
-        <div>
-            <ul>
-                <li className="listitem">home</li>
-                <li className="listitem">forum</li>
-                <li className="listitem">image</li>
-                <li className="listitem">cars</li>
-                <li className="listitem">contat</li>
-                <li className="listitem">login</li>
-                
+        <div className="conteiner">
+            
+            <ul className="header">
+                <NavLink activeClassName="listitem" exact={true} to="/" >Home</NavLink>
+                <NavLink activeClassName="listitem" exact={true} to="/about/forum" >Forum</NavLink>
+                <NavLink activeClassName="listitem" exact={true} to="/about/image" >Image</NavLink>
+                <NavLink activeClassName="listitem" exact={true} to="/about/cars" >Cars</NavLink>
+                <NavLink activeClassName="listitem" exact={true} to="/contact" >Register</NavLink>
+                <NavLink activeClassName="listitem" exact={true} to="/login" >Lsogin</NavLink>
             </ul>
         </div>
     );
