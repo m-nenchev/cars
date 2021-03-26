@@ -1,21 +1,29 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import './Header.css'
 
 
 function Header() {
     return (
-        <div className="conteiner">
-            
-            <ul className="header">
-                <NavLink activeClassName="listitem" exact={true} to="/" >Home</NavLink>
-                <NavLink activeClassName="listitem" exact={true} to="/about/forum" >Forum</NavLink>
-                <NavLink activeClassName="listitem" exact={true} to="/about/image" >Image</NavLink>
-                <NavLink activeClassName="listitem" exact={true} to="/about/cars" >Cars</NavLink>
-                <NavLink activeClassName="listitem" exact={true} to="/contact" >Register</NavLink>
-                <NavLink activeClassName="listitem" exact={true} to="/login" >Lsogin</NavLink>
-            </ul>
-        </div>
+        <header className="conteiner">
+         <nav className="navbar">
+            <section className="header">
+               <ul className="navbar-1">
+                  <li><Link ClassName="listitem" to="/" >Home</Link></li>
+                  <li><Link ClassName="listitem" to="/about/forum" >Forum</Link></li>
+                  <li><Link ClassName="listitem" to="/about/image" >Image</Link></li>
+                  <li><Link ClassName="listitem" to="/about/cars" >Cars</Link></li>
+                </ul>
+            </section> 
+
+            <section className="navbar-anonymous">
+                <ul className="navbar-2">
+                    <li><Link ClassName="listitem" to="/contact" >Register</Link></li>
+                    <li><Link ClassName="listitem" to="/login" >Login</Link></li>
+                </ul>
+            </section>
+            </nav>
+        </header>
     );
 }
 export default Header;
