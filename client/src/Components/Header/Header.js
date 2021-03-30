@@ -9,17 +9,17 @@ function Header() {
          <nav className="navbar">
             <section className="header">
                <ul className="navbar-1">
-                  <li><Link ClassName="listitem" to="/" >Home</Link></li>
-                  <li><Link ClassName="listitem" to="/about/forum" >Forum</Link></li>
-                  <li><Link ClassName="listitem" to="/about/image" >Image</Link></li>
-                  <li><Link ClassName="listitem" to="/about/cars" >Cars</Link></li>
+                  <li><Link className="listitem" to="/" >Home</Link></li>
+                  <li><Link className="listitem" to="/about/forum" >Forum</Link></li>
+                  <li><Link className="listitem" to="/about/image" >Image</Link></li>
+                  <li><Link className="listitem" to="/about/cars" >Cars</Link></li>
                 </ul>
             </section> 
 
             <section className="navbar-anonymous">
                 <ul className="navbar-2">
-                    <li><Link ClassName="listitem" to="/contact" >Register</Link></li>
-                    <li><Link ClassName="listitem" to="/login" >Login</Link></li>
+                    <li><Link className="listitem" to="/contact" >Register</Link></li>
+                    <li><Link className="listitem" to="/login" >Login</Link></li>
                 </ul>
             </section>
             </nav>
