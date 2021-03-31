@@ -11,7 +11,7 @@ const CarsView = ({
 
         carsService.create(name.value, description.value, imageURL.value)
             .then(() => {
-                history.push('/cars/create');
+                history.push('/cars');
             })
     };
     return (
