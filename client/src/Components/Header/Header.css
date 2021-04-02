@@ -1,5 +1,11 @@
+nav{
+    border-radius: 3px;
+    border: 3px solid #234465;
+}
 .header{
-    display:flex
+    display:flex;
+    
+    
 }
 .navbar-anonymous{
     text-align: left;
@@ -11,6 +17,13 @@
 nav.navbar-2{
     display: flex;
     
+}
+
+nav.navbar ul .span-li{
+    
+margin-left: 850px;
+padding-top: 5px;
+
 }
 
 nav.navbar ul {
@@ -43,4 +56,12 @@ a{
     width: auto;
     color:white;
 
+}
+.navbar ul li a:hover{
+    margin-top:2px;
+    background-color: cornsilk;
+    color: black;
+}
+.linkLogOut{
+    text-align: left;
 }

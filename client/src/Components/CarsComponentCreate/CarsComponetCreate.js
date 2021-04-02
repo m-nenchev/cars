@@ -1,4 +1,4 @@
-import './CarsComponentCreate.css';
+
 import * as carsService from '../../services/carsService';
 
 const CarsView = ({

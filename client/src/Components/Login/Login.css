@@ -1,0 +1,10 @@
+.login form{
+  margin: 5rem auto;
+}
+form{
+    width: 300px;
+    background-color: thistle;
+}
+fieldset{
+    text-decoration: none;
+}
