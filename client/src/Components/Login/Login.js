@@ -14,7 +14,9 @@ const Login = ({
         auth.signInWithEmailAndPassword(username, password)
             .then((userCredential) => {
                 history.push('/');
+                
             });
+           
     };      
 
     return (

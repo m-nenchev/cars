@@ -15,11 +15,9 @@ function Header() {
                   <li><Link className="listitem" to="/cars" >Cars</Link></li>
                   
                      <span>
-                         
-                     
                        <li className="span-li"><Link className="listitem" to="/login" >Login</Link></li>
                        <li className="span-li"><Link className="listitem" to="/register" >Register</Link></li>
-                       
+                       <li className="span-li"><Link className="listitem" to="/logOut">LogOut</Link></li>
                      </span>
                 </ul>
             </section> 

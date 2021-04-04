@@ -1,6 +1,6 @@
 
 
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch,Redirect } from 'react-router-dom';
 
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
@@ -9,10 +9,11 @@ import Forum from './Components/Forum/Forum';
 import ForumPostsCreate from './Components/ForumPostsCreate/ForumPostsCreate';
 import CarsComponentCreate from './Components/CarsComponentCreate/CarsComponetCreate';
 import Cars from './Components/Cars/Cars';
-import CarsView from './Components/CarsView/CrasView'
-import {} from './utils/Firebase'
-import Login from './Components/Login/Login'
-import Register from './Components/Regieter/Register'
+
+import {} from './utils/Firebase';
+import Login from './Components/Login/Login';
+import Register from './Components/Regieter/Register';
+import { auth } from './utils/Firebase';
 import './App.css';
 
 function App() {
@@ -27,9 +28,14 @@ function App() {
           
           <Route path="/create/forum"exact component={ForumPostsCreate} /> 
            <Route path="/create/cars" exact component={CarsComponentCreate} />
-           <Route path="/cars/view" exact component={CarsView}/>
-           <Route path="/login" component={Login}/>
-           <Route path="/register" component={Register} />
+           
+           <Route path="/login" exact component={Login}/>
+           <Route path="/register" excat component={Register} />
+           <Route path="/logOut" render={() =>{
+             auth.signOut();
+            return <Redirect to="/cars"/>
+           }}
+             />
        </Switch>
        
        <Footer/>

@@ -9,10 +9,15 @@ const CarDetails = () => {
     useEffect(() => {
         carsService.getAll()
             .then(res => setCar(res));
-    }, []);
+    }, [car]);
+
+    
+
+
 return(
     <div>
         <p>
+            
             Car name:{car.name}
         </p>
     </div>
