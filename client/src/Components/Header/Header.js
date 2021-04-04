@@ -14,11 +14,13 @@ function Header() {
                   <li><Link className="listitem" to="/about/image" >Image</Link></li>
                   <li><Link className="listitem" to="/cars" >Cars</Link></li>
                   
-                     <span>
+                     <div className="LoginDiv">
+                         <span className="LoginButton">
                        <li className="span-li"><Link className="listitem" to="/login" >Login</Link></li>
+                       </span>
                        <li className="span-li"><Link className="listitem" to="/register" >Register</Link></li>
                        <li className="span-li"><Link className="listitem" to="/logOut">LogOut</Link></li>
-                     </span>
+                     </div>
                 </ul>
             </section> 
 

@@ -1,4 +1,4 @@
-
+import './CarsComponentCreate.css'
 import * as carsService from '../../services/carsService';
 
 const CarsView = ({
@@ -18,7 +18,7 @@ const CarsView = ({
         
         <section className="create">
             <form onSubmit={onCreateCarSubmitHandler}>
-                <fieldset>
+              
                    
                     <h1>Add new Cras</h1>
                     <p className="field">
@@ -38,7 +38,7 @@ const CarsView = ({
                     <p className="field">
                         <label htmlFor="description">Description</label>
                         <span className="input">
-                            <textarea rows="4" cols="45" type="text" name="description" id="description"
+                            <textarea rows="4" cols="30" type="text" name="description" id="description"
                                 placeholder="Description"></textarea>
                             <span className="actions"></span>
                         </span>
@@ -46,7 +46,7 @@ const CarsView = ({
                     
                     
                     <input className="button submit" type="submit" value="Add Cars" />
-                </fieldset>
+                
             </form>
         </section>
     );

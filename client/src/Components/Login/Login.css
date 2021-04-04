@@ -1,7 +1,11 @@
 .login form{
   margin: 5rem auto;
+  border-radius: 0.4rem;
+  text-align: center;
 }
 form{
+  border-radius: 12px;
+  border: solid crimson;
     width: 300px;
     background-color: thistle;
 }

@@ -4,7 +4,7 @@
     text-align: center;
   }
   .form{
-      width: 300px;
+      width:400px;
       background-color: rgb(73, 72, 73);
   }
   input{
@@ -13,6 +13,8 @@
 
   }
 .submit{
+    margin-left: 10px;
+    margin-bottom: 8px;
    background-color: rgb(29, 161, 161);
    color: floralwhite; 
    width: 80px;
