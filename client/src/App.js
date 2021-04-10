@@ -16,6 +16,7 @@ import Register from './Components/Regieter/Register';
 import { auth } from './utils/Firebase';
 import './App.css';
 
+
 function App() {
   return (
     <div>
@@ -33,7 +34,7 @@ function App() {
            <Route path="/register" excat component={Register} />
            <Route path="/logOut" render={() =>{
              auth.signOut();
-            return <Redirect to="/cars"/>
+            return <Redirect to="/"/>
            }}
              />
        </Switch>

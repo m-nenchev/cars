@@ -4,6 +4,7 @@ function Contact(){
 return(
     <div>
         <Link to="/create/forum"> <button>Add Forum Text</button></Link>
+    
     </div>
       
 )

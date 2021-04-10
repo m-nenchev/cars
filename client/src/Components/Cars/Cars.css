@@ -1,3 +1,7 @@
 .cars{
     margin-left: 640px;
 }
+ul{
+    display: flex;
+    
+}

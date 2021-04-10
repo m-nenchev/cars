@@ -1,0 +1,9 @@
+li.carsImg{
+    margin-right: 50px;
+    display:block ;
+    width: 200px;
+    list-style: none outside;
+}
+li img{
+    width: 200px;
+}

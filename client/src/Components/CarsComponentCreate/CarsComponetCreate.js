@@ -1,5 +1,5 @@
 import './CarsComponentCreate.css'
-import * as carsService from '../../services/carsService';
+import * as fireStorService from '../../services/fireStorService';
 
 const CarsView = ({
     history,
@@ -9,11 +9,12 @@ const CarsView = ({
 
         const { name, description, imageURL } = e.target;
 
-        carsService.create(name.value, description.value, imageURL.value)
+        fireStorService.dataFierstor(name.value,imageURL.value, description.value )
             .then(() => {
                 history.push('/cars');
             })
     };
+ 
     return (
         
         <section className="create">
