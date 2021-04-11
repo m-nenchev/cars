@@ -5,3 +5,6 @@ ul{
     display: flex;
     
 }
+.addButton{
+    width: 20px;
+}

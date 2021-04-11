@@ -15,12 +15,12 @@ const ForumPost = ({
     };
   return (
    
-      <div>
-        <h1>Add Forum Text</h1>
+      <section className="forumCreate">
+        <h1 className="h1">Add Forum Text</h1>
     <form onSubmit={onCreateCarSubmitHandlers}>
       
             <div className="field">
-                <label htmlFor="name">Name</label>
+                <label htmlFor="name">Name User:</label>
                      <span className="input">
                          <input type="text" name="name" id="name" placeholder="Name" />
                            <span className="actions"></span>
@@ -30,7 +30,7 @@ const ForumPost = ({
             <div className="fiel">
                <label htmlFor="description">Description</label>
                    <span className="input">
-                      <textarea rows="4" cols="45" type="text" name="description" id="description"
+                      <textarea rows="4" cols="30" type="text" name="description" id="description"
                               placeholder="Description">
                         </textarea>
                    <span className="actions"></span>
@@ -38,7 +38,7 @@ const ForumPost = ({
             </div>
             <input className="button submit" type="submit" value="Add Forum Text" />
     </form>   
-    </div>
+    </section>
     
     
   );
