@@ -19,7 +19,7 @@ nav.navbar-2{
     
 }
 nav.navbar ul .LoginDiv{
-    margin-left: 800px;
+    margin-left: 5px;
 }
 
 nav.navbar ul .span-li{
@@ -69,4 +69,7 @@ a{
 }
 .linkLogOut{
     text-align: left;
+}
+.userName{
+    margin-left: 600px;
 }

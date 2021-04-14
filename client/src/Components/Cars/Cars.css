@@ -1,8 +1,8 @@
 .cars{
     margin-left: 640px;
 }
-ul{
-    display: flex;
+ul li{
+ display: inline;
     
 }
 .addButton{

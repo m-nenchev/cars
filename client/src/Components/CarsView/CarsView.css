@@ -1,3 +1,6 @@
+.carsName{
+    width: 100px;
+}
 li.carsImg{
     margin-right: 50px;
     display:block ;

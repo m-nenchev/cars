@@ -10,7 +10,7 @@ const CarView = ({
 return(
     <li className="carsImg">
         <h1>Hello this is my Car:  {name}</h1>
-        <p className="img"><img src={imageURL} /></p>
+        <span className="img"><img src={imageURL} /></span>
             <p className="description">{description}</p>
             
     </li>

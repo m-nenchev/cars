@@ -1,9 +1,14 @@
 
+import React,{useContext, useEffect} from 'react'
+import { UserContext } from '../../Context/Context'
 import { auth } from '../../utils/Firebase';
 import './Login.css'
-const Login = ({
-    history
-}) => {
+const Login = ({history})=>{
+
+    
+ 
+    const [user,setUser] = useContext(UserContext);
+
     const onLoginFormSubmitHandler = (e) => {
         e.preventDefault();
 
@@ -13,13 +18,27 @@ const Login = ({
         console.log(username, password);
 
         auth.signInWithEmailAndPassword(username, password)
-            .then((userCredential) => {
-                history.push('/');
-                
-            });
+            .then(res => {
+                const currUser = res.user;
+                if(currUser){
+                    history.push('/')
+                   }
+                    
+                 
+
+            })
+           
            
     };      
-
+    useEffect(()=>{
+        auth.onAuthStateChanged((user) => {
+         setUser(user);
+       
+         //console.log(user);
+         
+        })
+        
+    },[])
     return (
         <section className="login">
             <form onSubmit={onLoginFormSubmitHandler}>
