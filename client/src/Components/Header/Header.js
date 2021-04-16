@@ -32,7 +32,7 @@ const [email, setEmail] = useState('')
                   <li><Link className="listitem" to="/about/image" >Image</Link></li>
                   <li><Link className="listitem" to="/cars" >Cars</Link></li>
                   
-                  <span className="userName">Name:{email}</span>
+                  <span className="userName">UserName: {email}</span>
                      <div className="LoginDiv">
                        {email
                        ?  <span className="LoginButton">

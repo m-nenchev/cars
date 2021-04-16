@@ -12,10 +12,13 @@ const Register = ({
         const password = e.target.password.value;
 
         auth.createUserWithEmailAndPassword(username, password)
-            .then(userCredential => {
-                console.log('Register');
+        .then((auth) => {
+            if (auth) {
                 history.push('/');
-            });
+            }
+        })
+        .catch(error => alert(error.message))
+            
     }
     
     return (

@@ -23,10 +23,9 @@ const Login = ({history})=>{
                 if(currUser){
                     history.push('/')
                    }
-                    
-                 
-
-            })
+            
+           })
+           .catch(error => alert(error.message))
            
            
     };      

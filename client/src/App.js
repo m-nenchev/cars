@@ -14,12 +14,14 @@ import {UserContext} from './Context/Context'
 import {} from './utils/Firebase';
 import Login from './Components/Login/Login';
 import Register from './Components/Regieter/Register';
+import {useHistory} from 'react-router-dom'
 import { auth } from './utils/Firebase';
 import './App.css';
 
 
 function App() {
   const [user, setUser] = useState(null)
+  const history = useHistory();
   return (
     <div>
       <UserContext.Provider value={ [user, setUser]}>
@@ -36,9 +38,12 @@ function App() {
              <Route path="/login" exact component={Login}/>
              <Route path="/register" excat component={Register} />
              <Route path="/logOut" render={() =>{
-               auth.signOut();
-                  return <Redirect to="/"/>
-               }}
+               auth.signOut().then(()=>{
+                setUser('');
+                history.push('/')
+               }
+               )}
+            }
              />
         </Switch>  
        
