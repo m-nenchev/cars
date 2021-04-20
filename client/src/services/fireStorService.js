@@ -1,12 +1,15 @@
 import {db} from '../utils/Firebase';
-import {useState} from 'react';
+
 const url = "https://cars-project-2edf1-default-rtdb.europe-west1.firebasedatabase.app/.json"
 
-export const dataFierstor = (name,imageURL,description) => {
+export const dataFierstor = (nameAutor,name,imageURL,description,userId) => {
 let car = db.collection("cars").doc(`${name}`).set({
+    
+    nameAutor,
         name ,
         imageURL ,
         description ,
+        userId,
     })
     return fetch(url, {
         method: 'POST',

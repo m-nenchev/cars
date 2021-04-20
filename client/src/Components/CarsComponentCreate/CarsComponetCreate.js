@@ -1,20 +1,34 @@
 import './CarsComponentCreate.css'
 import * as fireStorService from '../../services/fireStorService';
-
+import {auth} from '../../utils/Firebase'
+import {useState,useEffect} from 'react'
 const CarsView = ({
     history,
 }) => {
+    
+
+const[user,setUser] = useState('')
     const onCreateCarSubmitHandler = (e) => {
         e.preventDefault();
 
-        const { name, description, imageURL } = e.target;
+        const { nameAutor, name, description, imageURL } = e.target;
 
-        fireStorService.dataFierstor(name.value,imageURL.value, description.value )
+        fireStorService.dataFierstor( nameAutor.value,name.value,imageURL.value, description.value,userId )
             .then(() => {
                 history.push('/cars');
             })
     };
- 
+   
+ useEffect(()=>{
+
+        auth.onAuthStateChanged((user)=>{
+            setUser(user);
+            
+        })
+       
+
+    },[])
+    const userId=user.uid;
     return (
         
         <section className="create">
@@ -22,8 +36,16 @@ const CarsView = ({
               
                    
                     <h1>Add new Cras</h1>
+                    
                     <p className="field">
-                        <label htmlFor="name">Name</label>
+                        <label htmlFor="nameAutor" >Name Autor</label>
+                        <span className="input">
+                            <input type="text" name="nameAutor" id="nameAutor" placeholder="Name Autor" />
+                            <span className="actions"></span>
+                        </span>
+                    </p>
+                    <p className="field">
+                        <label htmlFor="name">Name Cars</label>
                         <span className="input">
                             <input type="text" name="name" id="name" placeholder="Name" />
                             <span className="actions"></span>

@@ -9,6 +9,7 @@ import Forum from './Components/Forum/Forum';
 import ForumPostsCreate from './Components/ForumPostsCreate/ForumPostsCreate';
 import CarsComponentCreate from './Components/CarsComponentCreate/CarsComponetCreate';
 import Cars from './Components/Cars/Cars';
+import CarsEdit from './Components/CarsEdit/CarsEdit'
 import { useState } from 'react'
 import {UserContext} from './Context/Context'
 import {} from './utils/Firebase';
@@ -37,6 +38,7 @@ function App() {
              <Route path="/create/cars" exact component={CarsComponentCreate} />
              <Route path="/login" exact component={Login}/>
              <Route path="/register" excat component={Register} />
+             <Route path="edite/cars/:id" component={CarsEdit}/>
              <Route path="/logOut" render={() =>{
                auth.signOut().then(()=>{
                 setUser('');

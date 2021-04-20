@@ -7,6 +7,8 @@ import {db,auth} from './../../utils/Firebase'
 
 
 function Cars(){
+    
+    const[user,setUser] = useState('')
     const [email, setEmail] = useState('')
     auth.onAuthStateChanged((user)=>{
         //console.log(user);
@@ -16,7 +18,7 @@ function Cars(){
         setEmail(user.email)
         
     })
-    
+  
     const[car, setCar]= useState([]);
     const dataInfo= [{id:'',info:''}];
     const fetchData = ()=>{
@@ -27,14 +29,15 @@ function Cars(){
        setCar(dataInfo)
     
     })
+    .catch(err=>console.log(err));
     
 }
     useEffect(() => {
         fetchData();
-       
+        
     }, [])
- 
-   
+
+    console.log(user);
     return(
         
        <div className="cars">
@@ -42,15 +45,19 @@ function Cars(){
           <ul>
               {email
                ?<li> <Link to="/create/cars"> <button>Add Cars</button></Link></li>
-               :  "helloo"
+               :  " "
               }
           </ul>
           <ul>
-              
+        
               {
-                  car.map( x=>
-                    <CarsView key={x.id} {...x.info}/>
-                    )
+                  car.map( x=>{
+                    if(x.id !=''){
+                        return(
+                    <CarsView key={x.id} {...x.info} />
+                        )
+                    }
+                } )
               }
         
           </ul>

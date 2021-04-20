@@ -42,9 +42,14 @@ return(
 </ul>
        <ul>
        {
-                  cars.map( x=>
+                  cars.map( x=>{
+                    if(x.ids !=''){
+                        return(
                     <FormView key={x.ids} {...x.infos}/>
                     )
+                    }
+                  })
+                    
               }
        </ul>
 

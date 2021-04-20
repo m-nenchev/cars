@@ -1,6 +1,23 @@
+.forum-h1{
+    margin: auto;
+    font-size: 25px;
+}
+
 li.Forums{
+    border:4px solid rgb(144, 174, 255);
+    border-radius: 5px;
     margin-right: 50px;
+    margin-top:15px ;
     display:block ;
-    width: 200px;
+    width: 300px;
     list-style: none outside;
+    box-shadow: 10px 11px 14px grey;
+}
+.descriptions{
+    font-size: 18px;
+    background-color: rgb(231, 243, 234);
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: rgb(226, 165, 34);
 }
