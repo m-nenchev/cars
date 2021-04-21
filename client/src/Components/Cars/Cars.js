@@ -1,7 +1,7 @@
 import * as fireStorService from '../../services/fireStorService';
-import { useEffect, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import {Link} from 'react-router-dom'
-import CarsView from '../CarsView/CarsView'
+
 import './Cars.css'
 import {db,auth} from './../../utils/Firebase'
 
@@ -9,23 +9,25 @@ import {db,auth} from './../../utils/Firebase'
 function Cars(){
     
     const[user,setUser] = useState('')
+    
     const [email, setEmail] = useState('')
+   
     auth.onAuthStateChanged((user)=>{
         //console.log(user);
         if(!user){
         return ;
         }
         setEmail(user.email)
-        
+        setUser(user.uid);
     })
-  
+    
     const[car, setCar]= useState([]);
     const dataInfo= [{id:'',info:''}];
     const fetchData = ()=>{
     db.collection("cars").get()
     .then((data) => {
         data.docs.map(doc =>  dataInfo.push({id:doc.id, info:doc.data()}));
-        console.log(dataInfo);
+        
        setCar(dataInfo)
     
     })
@@ -34,7 +36,7 @@ function Cars(){
 }
     useEffect(() => {
         fetchData();
-        
+     
     }, [])
 
     console.log(user);
@@ -42,19 +44,29 @@ function Cars(){
         
        <div className="cars">
           
-          <ul>
+          <Fragment>
               {email
-               ?<li> <Link to="/create/cars"> <button>Add Cars</button></Link></li>
+               ?<span> <Link to="/create/cars"> <button>Add Cars</button></Link></span>
                :  " "
               }
-          </ul>
-          <ul>
+          </Fragment>
+          <ul className="carsView">
         
               {
                   car.map( x=>{
                     if(x.id !=''){
                         return(
-                    <CarsView key={x.id} {...x.info} />
+                            <li className="carsImg" key={x.id}>
+        
+                            <h1>Name Autor: {x.info.nameAutor}</h1>
+                            <h2>Hello this is my Car:  {x.info.name}</h2>
+                            <span className="img"><img src={x.info.imageURL} /></span>
+                                <p className="description">description: {x.info.description}</p>
+                                {user === x.info.userId  ? <div>
+                            <Link to={`edite/cars/${x.id}`}><button className="button-edit">Edit</button></Link>
+                                            
+                                        </div>  : '' }
+                        </li>
                         )
                     }
                 } )

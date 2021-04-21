@@ -7,7 +7,7 @@ function Contact(){
 
     const [email, setEmail] = useState('')
     auth.onAuthStateChanged((user)=>{
-        console.log(user);
+        
         if(!user){
         return ;
         }
@@ -43,7 +43,7 @@ return(
        <ul>
        {
                   cars.map( x=>{
-                    if(x.ids !=''){
+                    if(x.ids !==''){
                         return(
                     <FormView key={x.ids} {...x.infos}/>
                     )

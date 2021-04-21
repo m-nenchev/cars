@@ -6,8 +6,8 @@ import { useHistory } from 'react-router-dom';
 export default function EditCars({
     match
 }){
-    const idPost = match.params.id;
- 
+    const idPost = match.params.id
+    
     const [data, setData] = useState([])
     const [error, setError] = useState(false)
 
@@ -37,7 +37,7 @@ export default function EditCars({
        console.log(nameAutor);
 
         
-            if(name!=''&& description!='' && imageURL!='' ){
+            if(name!==''&& description!=='' && imageURL!=='' ){
                 db.
                 collection("cars").doc(idPost).set({
                     ...data,
@@ -69,13 +69,21 @@ export default function EditCars({
         
         getInfo();
     }, [])
-
+console.log(idPost
+    );
 return(
     <section className="create">
             <form onSubmit={OnSubmitChanges}>
               
                    
                     <h1>Add new Cras</h1>
+                    <p className="field">
+                        <label htmlFor="nameAutor" >Name Autor</label>
+                        <span className="input">
+                            <input type="text" name="nameAutor" id="nameAutor" placeholder="Name Autor" />
+                            <span className="actions"></span>
+                        </span>
+                    </p>
                     <p className="field">
                         <label htmlFor="name">Name</label>
                         <span className="input">

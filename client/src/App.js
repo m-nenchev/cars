@@ -1,6 +1,6 @@
 
 
-import { Route, Switch,Redirect } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
@@ -38,7 +38,7 @@ function App() {
              <Route path="/create/cars" exact component={CarsComponentCreate} />
              <Route path="/login" exact component={Login}/>
              <Route path="/register" excat component={Register} />
-             <Route path="edite/cars/:id" component={CarsEdit}/>
+             <Route path="/edite/cars/:id" component={CarsEdit}/>
              <Route path="/logOut" render={() =>{
                auth.signOut().then(()=>{
                 setUser('');
