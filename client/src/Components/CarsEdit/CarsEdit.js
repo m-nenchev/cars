@@ -78,7 +78,7 @@ return(
                    
                     <h1>Add new Cras</h1>
                     <p className="field">
-                        <label htmlFor="nameAutor" >Name Autor</label>
+                        <label htmlFor="nameAutor" >Name Author</label>
                         <span className="input">
                             <input type="text" name="nameAutor" id="nameAutor" placeholder="Name Autor" />
                             <span className="actions"></span>

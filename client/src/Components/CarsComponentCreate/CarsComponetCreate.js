@@ -54,7 +54,7 @@ const[user,setUser] = useState('')
                      <p className="field">
                         <label htmlFor="image">Image</label>
                         <span className="input">
-                            <input type="text" name="imageURL" id="image" placeholder="Image" />
+                            <input type="text" name="imageURL" id="image" placeholder=" Place URL: image" />
                             <span className="actions"></span>
                         </span>
                     </p>

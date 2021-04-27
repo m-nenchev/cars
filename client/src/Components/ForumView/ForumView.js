@@ -9,7 +9,7 @@ const ForumView = ({
 
 return(
     <li className="Forums">
-        <h1 className="forum-h1"> My car Problem whit model:  {name}</h1>
+        <h1 className="forum-h1"> My car Problem with model:  {name}</h1>
         
             <p className="descriptions">description: {description}</p>
             

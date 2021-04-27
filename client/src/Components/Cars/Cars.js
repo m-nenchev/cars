@@ -46,7 +46,7 @@ function Cars(){
           
           <Fragment>
               {email
-               ?<span> <Link to="/create/cars"> <button>Add Cars</button></Link></span>
+               ?<span> <Link to="/create/cars"> <button>Add Car</button></Link></span>
                :  " "
               }
           </Fragment>
@@ -58,13 +58,13 @@ function Cars(){
                         return(
                             <li className="carsImg" key={x.id}>
         
-                            <h1>Name Autor: {x.info.nameAutor}</h1>
+                            <h1>Name Author: {x.info.nameAutor}</h1>
                             <h2>Hello this is my Car:  {x.info.name}</h2>
                             <span className="img"><img src={x.info.imageURL} /></span>
                                 <p className="description">description: {x.info.description}</p>
                                 {user === x.info.userId  ? <div>
-                            <Link to={`edite/cars/${x.id}`}><button className="button-edit">Edit</button></Link>
-                                            
+                            <Link to={`/edite/cars/${x.id}`}><button className="button-edit">Edit</button></Link>
+                            <Link to={`/delete/cars/${x.id}`}><button className="button-edit">Delete</button></Link>  
                                         </div>  : '' }
                         </li>
                         )

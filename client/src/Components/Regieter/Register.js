@@ -29,7 +29,7 @@ const Register = ({
                     <p className="field">
                         <label htmlFor="username">Username</label>
                         <span className="input">
-                            <input type="text" name="username" id="username" placeholder="Username" />
+                            <input type="text" name="username" id="username" placeholder="Email" />
                             <span className="actions"></span>
                             <i className="fas fa-user"></i>
                         </span>

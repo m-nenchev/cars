@@ -1,6 +1,6 @@
 
 
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
@@ -10,7 +10,8 @@ import ForumPostsCreate from './Components/ForumPostsCreate/ForumPostsCreate';
 import CarsComponentCreate from './Components/CarsComponentCreate/CarsComponetCreate';
 import Cars from './Components/Cars/Cars';
 import CarsEdit from './Components/CarsEdit/CarsEdit'
-import { useState } from 'react'
+import Delete from './Components/DeleteCarPost/DeleteCarPost'
+import { useState,useEffect } from 'react'
 import {UserContext} from './Context/Context'
 import {} from './utils/Firebase';
 import Login from './Components/Login/Login';
@@ -21,8 +22,10 @@ import './App.css';
 
 
 function App() {
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState('')
   const history = useHistory();
+  
+
   return (
     <div>
       <UserContext.Provider value={ [user, setUser]}>
@@ -39,12 +42,15 @@ function App() {
              <Route path="/login" exact component={Login}/>
              <Route path="/register" excat component={Register} />
              <Route path="/edite/cars/:id" component={CarsEdit}/>
+             <Route path= "/delete/cars/:id" component={Delete}/>
              <Route path="/logOut" render={() =>{
                auth.signOut().then(()=>{
-                setUser('');
-                history.push('/')
+                 setUser('')
+               })
+                
+               return <Redirect to="/"/>
                }
-               )}
+               
             }
              />
         </Switch>  

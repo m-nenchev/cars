@@ -15,7 +15,7 @@ const Login = ({history})=>{
         const username = e.target.username.value;
         const password = e.target.password.value;
 
-        console.log(username, password);
+       // console.log(username, password);
 
         auth.signInWithEmailAndPassword(username, password)
             .then(res => {
