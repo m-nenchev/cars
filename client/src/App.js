@@ -35,12 +35,12 @@ function App() {
          <Switch>
 
              <Route path="/" exact component={Home}/>
-             <Route path="/forum" exact component={Forum}/>
-             <Route path="/cars" exact component={Cars}/>
-             <Route path="/create/forum"exact component={ForumPostsCreate} /> 
-             <Route path="/create/cars" exact component={CarsComponentCreate} />
-             <Route path="/login" exact component={Login}/>
-             <Route path="/register" excat component={Register} />
+             <Route path="/forum"  component={Forum}/>
+             <Route path="/cars"  component={Cars}/>
+             <Route path="/create/forum" component={ForumPostsCreate} /> 
+             <Route path="/create/cars"  component={CarsComponentCreate} />
+             <Route path="/login" component={Login}/>
+             <Route path="/register"  component={Register} />
              <Route path="/edite/cars/:id" component={CarsEdit}/>
              <Route path= "/delete/cars/:id" component={Delete}/>
              <Route path="/logOut" render={() =>{
