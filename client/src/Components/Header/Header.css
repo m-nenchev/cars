@@ -23,12 +23,9 @@ nav.navbar ul .LoginDiv{
 }
 
 nav.navbar ul .span-li{
- font-size: 25px; 
+font-size: 25px; 
 display: table-cell;
-
 margin-left: 850px;
-padding-top: 5px;
-
 }
 
 nav.navbar ul {
@@ -42,7 +39,8 @@ nav.navbar ul {
 nav.navbar ul li{
     display: block;
     list-style: none outside;
-    position: relative; 
+    position: relative;
+    padding: 5px; 
 }
 
 nav.navbar ul li a {
@@ -63,7 +61,6 @@ a{
 
 }
 .navbar ul li a:hover{
-    margin-top:2px;
     background-color: cornsilk;
     color: black;
 }

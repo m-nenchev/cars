@@ -1,3 +1,20 @@
+.buttonAddCar{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: cadetblue;
+    border-radius: 0.4rem;
+    border: solid 2px rgb(144, 174, 255);
+    margin: 20px 0 20px 20px;
+    width: 200px;
+    height: 38px;
+}
+
+.buttonAddCar:hover{
+    background-color: rgb(87, 116, 244);
+    color: white;
+    cursor: pointer;
+}
+
 ul.carsView{
     text-align: center;
     margin-right: 50px;
@@ -10,7 +27,7 @@ ul.carsView{
 ul.carsView li.carsImg{
     border:4px solid rgb(144, 174, 255);
     border-radius: 5px;
-    margin-top: 15px;
+    margin: 25px 0;
     display: block;
     width: 550px; 
     box-shadow: 10px 11px 14px grey;
