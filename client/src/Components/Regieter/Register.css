@@ -12,17 +12,3 @@
       height: 20px;
 
   }
-.submit{
-    margin-left: 10px;
-    margin-bottom: 8px;
-   background-color: rgb(29, 161, 161);
-   color: floralwhite; 
-   width: 80px;
-   height: 30px;
-}
-.submit:hover{
-    margin-top:2px;
-    background-color: cornsilk;
-    color: black;
-    cursor: pointer;
-}

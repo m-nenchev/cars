@@ -3,6 +3,8 @@ import React,{useContext, useEffect} from 'react'
 import { UserContext } from '../../Context/Context'
 import { auth } from '../../utils/Firebase';
 import './Login.css'
+import { FaRegUser, FaLock } from "react-icons/fa";
+
 const Login = ({history})=>{
 
     
@@ -40,28 +42,27 @@ const Login = ({history})=>{
     },[])
     return (
         <section className="login">
-            <form onSubmit={onLoginFormSubmitHandler}>
-                
-                    <legend>Login</legend>
-                    <p className="field">
-                        <label htmlFor="username">Username</label>
-                        <span className="input">
-                            <input type="text" name="username" id="username" placeholder="Username" />
-                            <span className="actions"></span>
-                            <i className="fas fa-user"></i>
-                        </span>
-                    </p>
-                    <p className="field">
-                        <label htmlFor="password">Password</label>
-                        <span className="input">
-                            <input type="password" name="password" id="password" placeholder="Password" />
-                            <span className="actions"></span>
-                            <i className="fas fa-key"></i>
-                        </span>
-                    </p>
-                    <input className="button" type="submit" className="submit" value="Login" />
-               
+            <div className='wrapper'>
+            <div className='title'><span>Login Form</span></div>
+            <form onSubmit={onLoginFormSubmitHandler}>     
+                <label className='rowLabel' htmlFor="username">Username:</label>
+                <div className="input">
+                <FaRegUser className='icon'/>
+                    <input type="text" className='rowText' name="username" id="username" placeholder="Username" required/>
+            
+                </div> 
+                    
+                <label className='rowLabel' htmlFor="password">Password:</label>
+                <div className="input">
+                    <FaLock className='icon'/>
+                    <input type="password" className='rowText' name="password" id="password" placeholder="Password" required/>
+                 
+                </div>
+                <div className='input'>
+                    <input  type="submit" className="inputSubmit" value="Login" /> 
+                </div>
             </form>
+            </div>
         </section>
     );
 };

@@ -1,13 +1,85 @@
-.login form{
-  margin: 5rem auto;
-  border-radius: 0.4rem;
-  text-align: center;
+.login{
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  overflow: hidden;
+}
+.login .wrapper{
+  max-width: 500px;
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.1);
+}
+.login .title{
+  height: 120px;
+  background: #16a085;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login .rowLabel{
+  font-size: 25px;
+  font-weight: 600;
+  color: lightseagreen;
+}
+.login .input{
+  height: 60px;
+  margin-top: 15px;
+  position: relative;
+}
+.login .input .rowText{
+  height: 100%;
+  width: 100%;
+  padding-left: 80px;
+  outline: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  background: #16a085;
+  border: 1px solid #16a085;
+  cursor: pointer;
+}
+.login .input .rowText:focus {
+  border-color: #16a085;
+}
+.login .input .inputSubmit{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  background: #16a085;
+  border: 1px solid #16a085;
+  cursor: pointer;
+}
+.login .icon{
+  position: absolute;
+  width: 55px;
+  height: 77%;
+  color: #fff;
+  padding-top: 5px;
+  font-size: 22px;
+  background: #16a085;
+  border: 1px solid #16a085;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 form{
-  border-radius: 12px;
-  border: solid crimson;
-    width: 300px;
-    background-color: thistle;
+  padding: 25px 35px;
 }
 fieldset{
     text-decoration: none;
