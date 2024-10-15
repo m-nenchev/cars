@@ -60,7 +60,7 @@ function Cars(){
         
                             <h1>Name Author: {x.info.nameAutor}</h1>
                             <h2>Hello this is my Car:  {x.info.name}</h2>
-                            <span className="img"><img src={x.info.imageURL} /></span>
+                            <span className="img"><img src={x.info.imageURL} alt="The photo is currently deleted" /></span>
                                 <p className="description">description: {x.info.description}</p>
                                 {user === x.info.userId  ? <div>
                             <Link to={`/edite/cars/${x.id}`}><button className="button-edit">Edit</button></Link>

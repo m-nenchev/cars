@@ -1,9 +1,8 @@
 ul.carsView{
-   
+    text-align: center;
     margin-right: 50px;
     margin-top:15px ;
     display:block ;
-    width: 200px;
     list-style: none outside;
     
 }
@@ -12,13 +11,14 @@ ul.carsView li.carsImg{
     border:4px solid rgb(144, 174, 255);
     border-radius: 5px;
     margin-top: 15px;
- display: block;
-   width: 200px; 
-   box-shadow: 10px 11px 14px grey;
+    display: block;
+    width: 550px; 
+    box-shadow: 10px 11px 14px grey;
 }
 
 li img{
     width: 200px;
+    color: red
 }
 li p{
     margin-left: 10px;
