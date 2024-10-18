@@ -47,3 +47,9 @@ h2{
 div.description{
     background-color: cornsilk;
 }
+
+@media(max-width: 450px){
+    ul.carsView li.carsImg{
+        width: 315px;
+    }
+}
